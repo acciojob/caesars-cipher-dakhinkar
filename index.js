@@ -10,7 +10,9 @@ const lookup = {
 
 function rot13(encodedStr){
   const codeArr = encodedStr.split("");  // String to Array
-  let decodedArr = []; // Your Result goes here
+  let decodedArr = codeArr.map((key) =>lookup[key] || key);
+  
+       // Your Result goes here
   // Only change code below this line
   // your code here
   // Only change code above this line
